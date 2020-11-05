@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
+  <title>IP Address Tracker</title>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <link rel="stylesheet" href="styles/style.css">
+
   <!-- MapBox -->
   <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
   <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
-
-  <title>IP Address Tracker</title>
 
 </head>
 <body>
 
   <main>
+
     <h1>IP Address Tracker</h1>
-
-    <form id="ip-form"><input type="text" id= "search" name="search" placeholder="Search for any IP address or domain"></form>
-
+    <form id="ip-form"><input type="text" id= "search" name="search" placeholder="Search for any IP address or domain" pattern="^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$"></form>
     <ul class="ip-details">
       <li>
         <h2>IP Address</h2>
@@ -42,71 +43,13 @@
         <p id="isp"></p>
       </li>
   </ul>
+
   </main>
 
-  <!-- <svg id="mapmarker" xmlns="http://www.w3.org/2000/svg" width="46" height="56"><path fill-rule="evenodd" d="M39.263 7.673c8.897 8.812 8.966 23.168.153 32.065l-.153.153L23 56 6.737 39.89C-2.16 31.079-2.23 16.723 6.584 7.826l.153-.152c9.007-8.922 23.52-8.922 32.526 0zM23 14.435c-5.211 0-9.436 4.185-9.436 9.347S17.79 33.128 23 33.128s9.436-4.184 9.436-9.346S28.21 14.435 23 14.435z"/></svg> -->
   <div id="mapid"></div>
 
-
-  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-  crossorigin=""></script>
-
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-
-  <script>
-
-    var api_key = "at_C4SDN7bt74w5infGoMPMzdtIIJd2w";
-
-    var lat = "";
-    var lng = "";
-
-
-    function update(ip) {
-
-      $.ajax({
-        url: "https://geo.ipify.org/api/v1",
-        data: {apiKey: api_key, ipAddress: ip},
-        success: function(data) {
-          document.getElementById("ip-address").innerHTML = data.ip;
-          document.getElementById("location").innerHTML = data.location.city + ", " + data.location.region + " " + data.location.postalCode;
-          document.getElementById("timezone").innerHTML = data.location.timezone + " UTC";
-          document.getElementById("isp").innerHTML = data.isp;
-
-          lat = data.location.lat;
-          lng = data.location.lng;
-
-          mapboxgl.accessToken = 'pk.eyJ1Ijoid2VsbGVyaW5kZXAiLCJhIjoiY2toNHhsbmgzMGczdDMwcWJqODVyd2FyeSJ9.io83u9yMFfuKLtBMrsaGNA';
-          var map = new mapboxgl.Map({
-            container: 'mapid',
-            style: 'mapbox://styles/mapbox/streets-v11',
-            center: [lng, lat],
-            zoom: 14,
-            interactive: false
-          });
-
-          var marker = new mapboxgl.Marker({
-            color: '#000000'
-          })
-          .setLngLat([lng, lat])
-          .addTo(map);
-        }
-      });
-
-    };
-
-    document.getElementById('ip-form').onsubmit = function() {
-      update(document.getElementById('search').value);
-      return false;
-    };
-
-    $(function() {
-      update();
-    });
-
-
-
-  </script>
+  <script src="scripts/script.js"></script>
 
 </body>
 </html>

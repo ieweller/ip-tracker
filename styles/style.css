@@ -74,7 +74,8 @@ main {
     main ul.ip-details li {
       text-align: left;
       width: 25%;
-      padding-left: 1.5rem; }
+      padding-left: 1.5rem;
+      overflow: hidden; }
       main ul.ip-details li:first-child {
         padding-left: 0; }
       main ul.ip-details li h2 {
