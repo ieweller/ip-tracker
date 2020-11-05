@@ -16,17 +16,29 @@
   <main>
     <h1>IP Address Tracker</h1>
 
-    <input type="text" placeholder="Search for any IP address or domain">
+    <input type="text" name="search" placeholder="Search for any IP address or domain">
 
-    <div class="ip-details">
-      <ul>
-        <li>IP Address</li>
-        <li>Location</li>
-        <li>Timezone</li>
-        <li>UTC <!-- add offset value dynamically using the API --></li>
-        <li>ISP</li>
-      </ul>
-    </div>
+    <ul class="ip-details">
+      <li>
+        <h2>IP Address</h2>
+        <p>%20%</p>
+      </li>
+      <div class="vert-rule"></div>
+      <li>
+        <h2>Location</h2>
+        <p>%20%</p>
+      </li>
+      <div class="vert-rule"></div>
+      <li>
+        <h2>Timezone</h2>
+        <p>%20% UTC</p> <!-- add offset value dynamically using the API -->
+      </li>
+      <div class="vert-rule"></div>
+      <li>
+        <h2>ISP</h2>
+        <p>%20%</p>
+      </li>
+  </ul>
   </main>
 </body>
 </html>

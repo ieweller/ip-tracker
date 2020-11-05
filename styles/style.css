@@ -1,8 +1,87 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+* {
+  box-sizing: border-box; }
+
 body {
   font-family: 'Rubik', sans-serif;
-  font-size: 18px;
+  font-size: 18px; }
+
+main {
   background-image: url(../images/pattern-bg.png);
   background-position: center center;
   background-size: cover;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+          justify-content: flex-start; }
+  main h1 {
+    color: white;
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+    margin: 2rem; }
+  main input[type="text"] {
+    border: none;
+    border-radius: 0.8rem;
+    padding: 1.25rem;
+    width: 30rem;
+    max-width: 85vw;
+    margin: 0; }
+    main input[type="text"]::-webkit-input-placeholder {
+      font-size: 1rem; }
+    main input[type="text"]::-moz-placeholder {
+      font-size: 1rem; }
+    main input[type="text"]:-ms-input-placeholder {
+      font-size: 1rem; }
+    main input[type="text"]::-ms-input-placeholder {
+      font-size: 1rem; }
+    main input[type="text"]::placeholder {
+      font-size: 1rem; }
+  main ul.ip-details {
+    background-color: white;
+    border-radius: 0.8rem;
+    width: 60rem;
+    max-width: 85vw;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: -4.5rem;
+    list-style: none;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    -webkit-box-align: center;
+            align-items: center;
+    justify-content: space-around; }
+    main ul.ip-details .vert-rule {
+      background: -webkit-gradient(linear, left bottom, left top, from(rgba(217, 217, 217, 0)), color-stop(10%, #d9d9d9), color-stop(90%, #d9d9d9), to(rgba(217, 217, 217, 0)));
+      background: linear-gradient(0deg, rgba(217, 217, 217, 0) 0%, #d9d9d9 10%, #d9d9d9 90%, rgba(217, 217, 217, 0) 100%);
+      width: 1px;
+      height: 4rem; }
+    main ul.ip-details li {
+      text-align: left;
+      width: 25%;
+      padding-left: 1.5rem; }
+      main ul.ip-details li:first-child {
+        padding-left: 0; }
+      main ul.ip-details li h2 {
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #969696;
+        font-size: 0.8rem;
+        font-weight: 400; }
+      main ul.ip-details li p {
+        font-size: 1.8rem;
+        font-weight: 500;
+        margin: 1rem 0 1rem 0; }
