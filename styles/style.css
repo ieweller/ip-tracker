@@ -62,14 +62,15 @@ main {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
             flex-direction: row;
-    -webkit-box-align: center;
-            align-items: center;
+    -webkit-box-align: top;
+            align-items: top;
     justify-content: space-around; }
     main ul.ip-details .vert-rule {
       background: -webkit-gradient(linear, left bottom, left top, from(rgba(217, 217, 217, 0)), color-stop(10%, #d9d9d9), color-stop(90%, #d9d9d9), to(rgba(217, 217, 217, 0)));
       background: linear-gradient(0deg, rgba(217, 217, 217, 0) 0%, #d9d9d9 10%, #d9d9d9 90%, rgba(217, 217, 217, 0) 100%);
       width: 1px;
-      height: 4rem; }
+      height: 4rem;
+      align-self: center; }
     main ul.ip-details li {
       text-align: left;
       width: 25%;
@@ -93,3 +94,7 @@ main {
   top: 0;
   left: 0;
   bottom: 0; }
+
+#mapmarker {
+  z-index: 99;
+  position: relative; }
