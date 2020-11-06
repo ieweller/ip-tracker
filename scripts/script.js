@@ -19,7 +19,7 @@ function update(input) {
       lat = data.location.lat;
       lng = data.location.lng;
 
-      var viewlat = lat + 0.008;
+      var viewlat = lat + 0.0075;
 
       mapboxgl.accessToken = 'pk.eyJ1Ijoid2VsbGVyaW5kZXAiLCJhIjoiY2toNHhsbmgzMGczdDMwcWJqODVyd2FyeSJ9.io83u9yMFfuKLtBMrsaGNA';
 
@@ -45,9 +45,12 @@ function update(input) {
 
 document.getElementById('ip-form').onsubmit = function() {
 
-  var input = document.getElementById('search').value;
+  var searchField = document.getElementById('search');
 
-  document.getElementById('search').value = "";
+  var input = searchField.value;
+
+  searchField.value = "";
+  searchField.blur();
 
   update(input);
 

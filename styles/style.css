@@ -35,30 +35,45 @@ main {
     width: 30rem;
     max-width: 85vw;
     position: relative; }
-    main form input[type="text"] {
+    main form #search {
       font-size: 1rem;
       font-family: 'Rubik', sans-serif;
       font-weight: 400;
       border: none;
       border-radius: 0.8rem;
-      padding: 1.25rem;
+      padding: 1.25rem 4rem 1.25rem 1.25rem;
       width: 100%;
       margin: 0; }
-      main form input[type="text"]::-webkit-input-placeholder {
+      main form #search::-webkit-input-placeholder {
         font-size: 1rem;
-        font-weight: 400; }
-      main form input[type="text"]::-moz-placeholder {
+        font-weight: 400;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+      main form #search::-moz-placeholder {
         font-size: 1rem;
-        font-weight: 400; }
-      main form input[type="text"]:-ms-input-placeholder {
+        font-weight: 400;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+      main form #search:-ms-input-placeholder {
         font-size: 1rem;
-        font-weight: 400; }
-      main form input[type="text"]::-ms-input-placeholder {
+        font-weight: 400;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+      main form #search::-ms-input-placeholder {
         font-size: 1rem;
-        font-weight: 400; }
-      main form input[type="text"]::placeholder {
+        font-weight: 400;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+      main form #search::placeholder {
         font-size: 1rem;
-        font-weight: 400; }
+        font-weight: 400;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; }
     main form button {
       border: none;
       border-radius: 0 0.8rem 0.8rem 0;
@@ -79,23 +94,11 @@ main {
   @media screen and (max-width: 768px) {
     main h1 {
       font-size: 1.5rem;
-      margin: 1.25rem 0 1.25rem 0; }
-    main form input[type="text"] {
-      font-size: 0.8rem;
-      padding: 1rem; }
-      main form input[type="text"]::-webkit-input-placeholder {
-        font-size: 0.8rem; }
-      main form input[type="text"]::-moz-placeholder {
-        font-size: 0.8rem; }
-      main form input[type="text"]:-ms-input-placeholder {
-        font-size: 0.8rem; }
-      main form input[type="text"]::-ms-input-placeholder {
-        font-size: 0.8rem; }
-      main form input[type="text"]::placeholder {
-        font-size: 0.8rem; } }
+      margin: 1.25rem 0 1.25rem 0; } }
   main ul.ip-details {
     background-color: white;
     border-radius: 0.8rem;
+    box-shadow: 0 0.5rem 1rem rgba(43, 43, 43, 0.1);
     width: 60rem;
     max-width: 85vw;
     padding: 1.5rem;
@@ -142,16 +145,13 @@ main {
         margin-top: 1.25rem;
         margin-bottom: -8.5rem; }
         main ul.ip-details .vert-rule {
-          background: -webkit-gradient(linear, left top, right top, from(rgba(217, 217, 217, 0)), color-stop(10%, #d9d9d9), color-stop(90%, #d9d9d9), to(rgba(217, 217, 217, 0)));
-          background: linear-gradient(90deg, rgba(217, 217, 217, 0) 0%, #d9d9d9 10%, #d9d9d9 90%, rgba(217, 217, 217, 0) 100%);
-          width: 4rem;
-          height: 1px; }
+          display: none; }
         main ul.ip-details li {
           text-align: center;
           width: 100%;
           padding-left: 0; }
           main ul.ip-details li h2 {
-            font-size: 0.55rem; }
+            font-size: 0.65rem; }
           main ul.ip-details li p {
             font-size: 1.2rem;
             margin: 0.5rem 0 0.5rem 0; } }
