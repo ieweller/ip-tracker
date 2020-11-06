@@ -159,6 +159,7 @@ main {
 #mapid {
   position: absolute;
   width: 100vw;
+  min-height: 667px;
   top: 0;
   left: 0;
   bottom: 0; }
