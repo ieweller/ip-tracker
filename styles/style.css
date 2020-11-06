@@ -31,23 +31,40 @@ main {
     font-weight: 400;
     text-align: center;
     margin: 2rem; }
-  main input[type="text"] {
-    border: none;
-    border-radius: 0.8rem;
-    padding: 1.25rem;
+  main form {
     width: 30rem;
-    max-width: 85vw;
-    margin: 0; }
-    main input[type="text"]::-webkit-input-placeholder {
-      font-size: 1rem; }
-    main input[type="text"]::-moz-placeholder {
-      font-size: 1rem; }
-    main input[type="text"]:-ms-input-placeholder {
-      font-size: 1rem; }
-    main input[type="text"]::-ms-input-placeholder {
-      font-size: 1rem; }
-    main input[type="text"]::placeholder {
-      font-size: 1rem; }
+    position: relative; }
+    main form input[type="text"] {
+      font-size: 1rem;
+      font-family: 'Rubik', sans-serif;
+      border: none;
+      border-radius: 0.8rem;
+      padding: 1.25rem;
+      width: 100%;
+      max-width: 85vw;
+      margin: 0; }
+      main form input[type="text"]::-webkit-input-placeholder {
+        font-size: 1rem; }
+      main form input[type="text"]::-moz-placeholder {
+        font-size: 1rem; }
+      main form input[type="text"]:-ms-input-placeholder {
+        font-size: 1rem; }
+      main form input[type="text"]::-ms-input-placeholder {
+        font-size: 1rem; }
+      main form input[type="text"]::placeholder {
+        font-size: 1rem; }
+    main form button {
+      border: none;
+      border-radius: 0 0.8rem 0.8rem 0;
+      background-color: #000000;
+      background-image: url(../images/icon-arrow.svg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 3.5rem; }
   main ul.ip-details {
     background-color: white;
     border-radius: 0.8rem;

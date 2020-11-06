@@ -40,7 +40,9 @@ function update(ip) {
 }
 
 document.getElementById('ip-form').onsubmit = function() {
-  update(document.getElementById('search').value);
+  var input = document.getElementById('search').value;
+  document.getElementById('search').value = "";
+  update(input);
   return false;
 };
 
