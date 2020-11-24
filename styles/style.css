@@ -95,7 +95,7 @@ main {
     main h1 {
       font-size: 1.5rem;
       margin: 1.25rem 0 1.25rem 0; } }
-  main ul.ip-details {
+  main .ip-details {
     background-color: white;
     border-radius: 0.8rem;
     box-shadow: 0 0.5rem 1rem rgba(43, 43, 43, 0.1);
@@ -113,46 +113,46 @@ main {
     -webkit-box-align: top;
             align-items: top;
     justify-content: space-around; }
-    main ul.ip-details .vert-rule {
+    main .ip-details .vert-rule {
       background: -webkit-gradient(linear, left bottom, left top, from(rgba(217, 217, 217, 0)), color-stop(10%, #d9d9d9), color-stop(90%, #d9d9d9), to(rgba(217, 217, 217, 0)));
       background: linear-gradient(0deg, rgba(217, 217, 217, 0) 0%, #d9d9d9 10%, #d9d9d9 90%, rgba(217, 217, 217, 0) 100%);
       width: 1px;
       height: 4rem;
       align-self: center; }
-    main ul.ip-details li {
+    main .ip-details--item {
       text-align: left;
       width: 25%;
       padding-left: 1.5rem;
       overflow: hidden; }
-      main ul.ip-details li:first-child {
+      main .ip-details--item:first-child {
         padding-left: 0; }
-      main ul.ip-details li h2 {
+      main .ip-details--item h2 {
         text-transform: uppercase;
         letter-spacing: 1px;
         color: #969696;
         font-size: 0.8rem;
         font-weight: 500; }
-      main ul.ip-details li p {
+      main .ip-details--item p {
         font-size: 1.4rem;
         font-weight: 500;
         margin: 1rem 0 1rem 0; }
     @media screen and (max-width: 768px) {
-      main ul.ip-details {
+      main .ip-details {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
                 flex-direction: column;
         padding: 1rem;
         margin-top: 1.25rem;
         margin-bottom: -8.5rem; }
-        main ul.ip-details .vert-rule {
+        main .ip-details .vert-rule {
           display: none; }
-        main ul.ip-details li {
+        main .ip-details li {
           text-align: center;
           width: 100%;
           padding-left: 0; }
-          main ul.ip-details li h2 {
+          main .ip-details li h2 {
             font-size: 0.65rem; }
-          main ul.ip-details li p {
+          main .ip-details li p {
             font-size: 1.2rem;
             margin: 0.5rem 0 0.5rem 0; } }
 

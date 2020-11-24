@@ -25,30 +25,30 @@
 
       <!-- pattern="^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$" -->
 
-      <input type="text" id= "search" name="search" placeholder="Search for any IP address or domain" autocomplete="off" inputmode="url">
-      <button></button>
+      <input type="text" id= "search" name="search" placeholder="Search for any IP address or domain" autocomplete="off" inputmode="url" aria-label="Search input">
+      <button aria-label="Search"></button>
     </form>
-    <ul class="ip-details">
-      <li>
+    <div class="ip-details">
+      <div class="ip-details--item">
         <h2>IP Address</h2>
         <p id="ip-address"></p>
-      </li>
-      <div class="vert-rule"></div>
-      <li>
+      </div>
+      <div class="vert-rule" style="width:1px;"></div>
+      <div class="ip-details--item">
         <h2>Location</h2>
         <p id="location"></p>
-      </li>
+      </div>
       <div class="vert-rule"></div>
-      <li>
+      <div class="ip-details--item">
         <h2>Timezone</h2>
         <p id="timezone"></p>
-      </li>
+      </div>
       <div class="vert-rule"></div>
-      <li>
+      <div class="ip-details--item">
         <h2>ISP</h2>
         <p id="isp"></p>
-      </li>
-  </ul>
+      </div>
+  </div>
 
   </main>
 
