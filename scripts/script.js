@@ -12,7 +12,7 @@ function update(input) {
     success: function(data) {
 
       document.getElementById("ip-address").innerHTML = data.ip;
-      document.getElementById("location").innerHTML = data.location.city + ", " + data.location.region + " " + data.location.postalCode;
+      document.getElementById("location").innerHTML = data.location.city + ", " + data.location.region;
       document.getElementById("timezone").innerHTML = data.location.timezone + " UTC";
       document.getElementById("isp").innerHTML = data.isp;
 
