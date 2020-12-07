@@ -126,6 +126,11 @@ main {
       overflow: hidden; }
       main .ip-details--item:first-child {
         padding-left: 0; }
+      @media screen and (max-width: 768px) {
+        main .ip-details--item {
+          width: 100%;
+          padding: 0;
+          text-align: center; } }
       main .ip-details--item h2 {
         text-transform: uppercase;
         letter-spacing: 1px;
